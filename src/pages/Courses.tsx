@@ -150,35 +150,59 @@ const Courses = () => {
         </a>
       </div>
 
-      {/* Demo Timetable */}
-      <div className="bg-white p-6 rounded-lg mb-8">
-        <h3 className="text-lg font-semibold mb-4">Timetable</h3>
-        <table className="w-full border-collapse border border-gray-300">
-          <thead>
-            <tr className="bg-gray-100">
-              <th className="border border-gray-300 px-4 py-2">Day</th>
-              <th className="border border-gray-300 px-4 py-2">Time</th>
-              <th className="border border-gray-300 px-4 py-2">Course</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border border-gray-300 px-4 py-2">Monday</td>
-              <td className="border border-gray-300 px-4 py-2">9:00 AM - 11:00 AM</td>
-              <td className="border border-gray-300 px-4 py-2">CSC 101: Introduction to Computer Science</td>
-            </tr>
-            <tr>
-              <td className="border border-gray-300 px-4 py-2">Wednesday</td>
-              <td className="border border-gray-300 px-4 py-2">1:00 PM - 3:00 PM</td>
-              <td className="border border-gray-300 px-4 py-2">CSC 201: Data Structures</td>
-            </tr>
-            <tr>
-              <td className="border border-gray-300 px-4 py-2">Friday</td>
-              <td className="border border-gray-300 px-4 py-2">10:00 AM - 12:00 PM</td>
-              <td className="border border-gray-300 px-4 py-2">CSC 305: Database Systems</td>
-            </tr>
-          </tbody>
-        </table>
+      {/* Department Timetable */}
+      <div className="mt-12">
+        <h3 className="text-2xl font-bold mb-6">Department Timetable</h3>
+        <div className="overflow-x-auto">
+          <table className="table-auto w-full border-collapse border border-gray-300">
+            <thead>
+              <tr className="bg-primary text-white">
+                <th className="border border-gray-300 px-4 py-2">Day</th>
+                <th className="border border-gray-300 px-4 py-2">9:00 AM - 11:00 AM</th>
+                <th className="border border-gray-300 px-4 py-2">11:00 AM - 1:00 PM</th>
+                <th className="border border-gray-300 px-4 py-2">2:00 PM - 4:00 PM</th>
+                <th className="border border-gray-300 px-4 py-2">4:00 PM - 6:00 PM</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="hover:bg-gray-100">
+                <td className="border border-gray-300 px-4 py-2 font-semibold">Monday</td>
+                <td className="border border-gray-300 px-4 py-2">Algorithms (Room 101)</td>
+                <td className="border border-gray-300 px-4 py-2">Data Structures (Room 102)</td>
+                <td className="border border-gray-300 px-4 py-2">Software Engineering (Room 103)</td>
+                <td className="border border-gray-300 px-4 py-2">Research Seminar (Room 104)</td>
+              </tr>
+              <tr className="hover:bg-gray-100">
+                <td className="border border-gray-300 px-4 py-2 font-semibold">Tuesday</td>
+                <td className="border border-gray-300 px-4 py-2">Mathematics (Room 201)</td>
+                <td className="border border-gray-300 px-4 py-2">Physics (Room 202)</td>
+                <td className="border border-gray-300 px-4 py-2">AI & ML (Room 203)</td>
+                <td className="border border-gray-300 px-4 py-2">Database Systems (Room 204)</td>
+              </tr>
+              <tr className="hover:bg-gray-100">
+                <td className="border border-gray-300 px-4 py-2 font-semibold">Wednesday</td>
+                <td className="border border-gray-300 px-4 py-2">Operating Systems (Room 301)</td>
+                <td className="border border-gray-300 px-4 py-2">Networking (Room 302)</td>
+                <td className="border border-gray-300 px-4 py-2">Cybersecurity (Room 303)</td>
+                <td className="border border-gray-300 px-4 py-2">Web Development (Room 304)</td>
+              </tr>
+              <tr className="hover:bg-gray-100">
+                <td className="border border-gray-300 px-4 py-2 font-semibold">Thursday</td>
+                <td className="border border-gray-300 px-4 py-2">Human-Computer Interaction (Room 401)</td>
+                <td className="border border-gray-300 px-4 py-2">Cloud Computing (Room 402)</td>
+                <td className="border border-gray-300 px-4 py-2">Mobile Development (Room 403)</td>
+                <td className="border border-gray-300 px-4 py-2">Ethics in Computing (Room 404)</td>
+              </tr>
+              <tr className="hover:bg-gray-100">
+                <td className="border border-gray-300 px-4 py-2 font-semibold">Friday</td>
+                <td className="border border-gray-300 px-4 py-2">Capstone Project (Room 501)</td>
+                <td className="border border-gray-300 px-4 py-2">Machine Learning (Room 502)</td>
+                <td className="border border-gray-300 px-4 py-2">Big Data (Room 503)</td>
+                <td className="border border-gray-300 px-4 py-2">Faculty Meeting (Room 504)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       {/* Course Filters */}

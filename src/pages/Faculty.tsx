@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -63,35 +62,41 @@ const Faculty = () => {
         subtitle="Meet our dedicated faculty members who are leaders in research and education" 
       />
       
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
         {faculty.map((member) => (
-          <Card key={member.id}>
+          <Card 
+            key={member.id} 
+            className="p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 rounded-lg"
+          >
             <div className="flex flex-col sm:flex-row gap-6">
               <Avatar className="h-24 w-24">
-                <AvatarFallback className="text-2xl">
+                <AvatarFallback className="text-2xl bg-gray-200 text-gray-600">
                   {member.name.split(' ').map(n => n[0]).join('')}
                 </AvatarFallback>
               </Avatar>
               
               <div className="flex-1">
-                <h3 className="text-xl font-bold">{member.name}</h3>
+                <h3 className="text-xl font-bold text-gray-800">{member.name}</h3>
                 <p className="text-primary font-medium">{member.title}</p>
-                <p className="text-muted-foreground mt-1">{member.specialization}</p>
+                <p className="text-gray-600 mt-1">{member.specialization}</p>
                 
                 <div className="mt-4 space-y-2 text-sm">
                   <p>
-                    <span className="font-semibold">Email:</span>{" "}
-                    <a href={`mailto:${member.email}`} className="text-primary hover:underline flex items-center gap-1">
-                      <Mail className="h-3 w-3" />
+                    <span className="font-semibold text-gray-700">Email:</span>{" "}
+                    <a 
+                      href={`mailto:${member.email}`} 
+                      className="text-primary hover:underline flex items-center gap-1"
+                    >
+                      <Mail className="h-4 w-4" />
                       {member.email}
                     </a>
                   </p>
-                  <p><span className="font-semibold">Office:</span> {member.office}</p>
-                  <p><span className="font-semibold">Phone:</span> {member.phone}</p>
-                  <p><span className="font-semibold">Office Hours:</span> {member.officeHours}</p>
+                  <p><span className="font-semibold text-gray-700">Office:</span> {member.office}</p>
+                  <p><span className="font-semibold text-gray-700">Phone:</span> {member.phone}</p>
+                  <p><span className="font-semibold text-gray-700">Office Hours:</span> {member.officeHours}</p>
                 </div>
                 
-                <p className="mt-4 text-muted-foreground text-sm line-clamp-2">{member.bio}</p>
+                <p className="mt-4 text-gray-500 text-sm line-clamp-3">{member.bio}</p>
               </div>
             </div>
           </Card>
