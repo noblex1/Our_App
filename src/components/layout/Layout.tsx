@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import UniversityLogo from './p1.jpg';
-import CSDeptLogo from './p3.jpg';
+import CSDeptLogo from './p4.jpg';
 import { Bell } from 'lucide-react'; // Assuming you're using Lucide icons
 import Footer from './Footer';
 
